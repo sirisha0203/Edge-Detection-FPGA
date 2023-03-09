@@ -17,3 +17,11 @@ Keywords: Edge Detection, FPGA, Hardware, Real-time Processing, Image Processing
 ## Canny Edge Detection: 
 
 ### Algorithm:
+
+## Designing the Unit:
+
+## Simulation:
+
+## Results and Conclusions:
+
+## References:
