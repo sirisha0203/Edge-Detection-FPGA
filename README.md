@@ -15,11 +15,6 @@ Edge detection includes a variety of mathematical methods that aim at identifyin
 
 ### Algorithm:
 
-## Canny 
-
-
-### Algorithm:
-
 ## Designing the Unit:
 
 ## Simulation:
