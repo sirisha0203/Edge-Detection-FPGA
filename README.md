@@ -8,13 +8,15 @@ Keywords: Edge Detection, FPGA, Hardware, Real-time Processing, Image Processing
 
 ## Introduction
 
+Edge detection includes a variety of mathematical methods that aim at identifying edges, curves in a digital image at which the image brightness changes sharply or, more formally.
 ## Objectives
 
 ## Sobel Edge Detection
 
 ### Algorithm:
 
-## Canny Edge Detection: 
+## Canny 
+
 
 ### Algorithm:
 
