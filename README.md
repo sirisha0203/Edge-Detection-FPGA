@@ -34,7 +34,15 @@ Gx = | 4        | 5        | 6        | * A    (2)
 In the above matrixes, A represents the original image, Gx and Gy represent the kernels that are convolved with the horizontal and vertical kernels.
 
 ## Designing the Unit:
-
+Step 1: Input – Read an image
+Step 2: Convert the true-color RGB image to the grayscale image
+Step 3: Convert the image to double
+Step 4: Pre-allocate the filtered_image matrix with zeros
+Step 5: Define Sobel Operator Mask
+Step 6: Edge Detection Process (Compute Gradient approximation and magnitude of vector)
+Step 7: Display the filtered image
+Step 8: Thresholding on the filtered image
+Step 9: Display the edge-detected image
 ## Simulation:
 
 ## Results and Conclusions:
