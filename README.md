@@ -18,7 +18,16 @@ at each point and the orientation of that gradient. The gradient magnitude is gi
 by sqrt(Gx^2 + Gy^2).
 
 ## Designing the Unit:
-
+MATLAB IMPLEMENTATION
+We used MATLAB as golden reference and verification purposes.
+![image](https://user-images.githubusercontent.com/121241278/229340475-4b97942d-661d-4624-9216-1f26c0973f85.png)
+Here we can see that there 2 nested loops. The use of these loops are to cover the whole 2-D matrix of the image and leave the edges. Inside this loop we are doing element-wise matrix multiplication of a 3X3 matrix with a sobel mask.
+VERILOG IMPLEMENTATION
+The MATLAB code was taken as foundation code. The hardware implementation was done on Xillinx platform. The synthesizable code was burnt on to a basys3 fpga board.
+The code is divided into several modules for making it more understandable and feasible. The functional description of the modules are as following:
+• topcontroller : This module is the central module of our code. It calls other modules such as Uart and sobel. This code initializes registers, matrices and blockrams. The crux of the code lies in the FSM that we have designed. The 4 state FSM first receives data from pc through the UART and fills it in the image blockram. Then next state uses a sophisticated algorithm to extract a sub-matrix from a single dimension blockram. The next state uses a trigger flag(received from sobel module) to store the data received into filtered image blockram which is initialized for filtered image after sobel module sends out the computed data. The last state sends the data to pc through UART.
+• sobel: This module performs a 3X3 element-wise matrix multiplication. We used a optimizing method of loop unrolling to reduce the delay in matrix multiplication. We also used a floating point ip to calculate square root.
+• Uart: This module is mainly for transferring and receiving data from pc to fpga and viceversa.
 ## Simulation:
 
 ## Results and Conclusions:
