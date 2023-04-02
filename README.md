@@ -32,6 +32,10 @@ The code is divided into several modules for making it more understandable and f
 • sobel: This module performs a 3X3 element-wise matrix multiplication. We used a optimizing method of loop unrolling to reduce the delay in matrix multiplication. We also used a floating point ip to calculate square root.
 
 • Uart: This module is mainly for transferring and receiving data from pc to fpga and viceversa.
+
+Steps to make a synthesizable code: We first made our RTL level code in verilog. The next step was to make it synthesizable. We had to remove dependencies such as
+hierarchical referencing, loops and commands such as $realtobits etc.
+We used a test-bench to verify our working of the code. We sent data through a loop to the uart and received data from uart. Main purpose the implementation was to verify working of our code and as mentioned we used MATLAB as our golden reference.
 ## Simulation:
 
 ## Results and Conclusions:
