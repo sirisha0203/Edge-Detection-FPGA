@@ -33,11 +33,20 @@ The code is divided into several modules for making it more understandable and f
 
 • Uart: This module is mainly for transferring and receiving data from pc to fpga and viceversa.
 
-Steps to make a synthesizable code: We first made our RTL level code in verilog. The next step was to make it synthesizable. We had to remove dependencies such as
+Steps to make a synthesizable code : We first made our RTL level code in verilog. The next step was to make it synthesizable. We had to remove dependencies such as
 hierarchical referencing, loops and commands such as $realtobits etc.
 We used a test-bench to verify our working of the code. We sent data through a loop to the uart and received data from uart. Main purpose the implementation was to verify working of our code and as mentioned we used MATLAB as our golden reference.
 ## Simulation:
+![image](https://user-images.githubusercontent.com/121241278/229340924-91d8888d-4adb-4108-88f7-d31b8bc51ce8.png)
+
 
 ## Results and Conclusions:
+![image](https://user-images.githubusercontent.com/121241278/229340942-fd16828c-6fa2-4b17-b6a5-d68223cc7ece.png)
+
+![image](https://user-images.githubusercontent.com/121241278/229340957-086767c7-51ab-4913-a959-70749617dabd.png)
 
 ## References:
+1. https://homepages.inf.ed.ac.uk/rbf/HIPR2/sobel.htm
+2. https://www.geeksforgeeks.org/matlab-edge-detection-of-an-image-without-usingin-built-function/
+3. www.nandland.com
+4. https://www.researchgate.net/publication/330280038_Review_on_Image_processingFPGA_implementation_perspective
